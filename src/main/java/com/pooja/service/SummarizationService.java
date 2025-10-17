@@ -101,7 +101,6 @@ public class SummarizationService {
     /**
      * Finds top 3 semantically similar tickets from the in-memory vector store
      */
-
     public List<String> searchSimilarTicketsByContextAndSentiment(String queryText, String contextTag) {
         // Step 1: Enrich query with context
         String enrichedQuery = queryText + " related to " + contextTag;
@@ -130,7 +129,6 @@ public class SummarizationService {
         if (filtered.isEmpty()) {
             return List.of("No similar tickets found with matching sentiment and context: " + querySentiment + ", " + contextTag);
         }
-
         return filtered;
     }
 }
